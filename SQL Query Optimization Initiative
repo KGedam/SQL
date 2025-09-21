@@ -1,0 +1,17 @@
+-- 1. Retrieve all reports
+SELECT * FROM Reports;
+
+-- 2. Find reports created by Dr. Mehta
+SELECT * FROM Reports WHERE created_by = 'Dr. Mehta';
+
+-- 3. Count completed reports
+SELECT COUNT(*) FROM Reports WHERE status = 'Completed';
+
+-- 4. List departments with reports
+SELECT department FROM Reports GROUP BY department;
+
+-- 5. Find reports with execution time above 12 seconds
+SELECT report_name, execution_time FROM Reports WHERE execution_time > 12;
+
+-- 6. Sort reports by execution time
+SELECT report_name, execution_time FROM Reports ORDER BY execution_time DESC;
